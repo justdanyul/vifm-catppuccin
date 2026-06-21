@@ -34,5 +34,13 @@ Of course, swapping `catppuccin-mocha` for `catppuccin-latte`, `catppuccin-frapp
 
 > [!NOTE]
 > For the exact palette, your terminal needs true-colour support
-> (`echo $COLORTERM` should report `truecolor` or `24bit`). 
+> (`echo $COLORTERM` should report `truecolor` or `24bit`). If your COLORTERM is set as expected, 
+> but you aren't getting the right results, you may need to set your TERM variable different. For 
+> example, I have the following fish script to ensure I open vifm with TERM=xterm-direct
 
+```
+function vifm
+    command env TERM=xterm-direct vifm $argv
+end
+funcsave vifm
+```
