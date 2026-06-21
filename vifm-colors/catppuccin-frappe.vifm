@@ -1,0 +1,78 @@
+" VIFM COLORS
+" Catppuccin Frappe
+" Palette:     https://github.com/catppuccin/catppuccin
+" Style guide: https://github.com/catppuccin/catppuccin/blob/main/docs/style-guide.md
+"
+" Colour roles follow the Catppuccin style guide on a best-effort basis.
+" Terminals cannot render alpha, so guide colours specified with opacity
+" (cursor line, selection) use the nearest opaque surface as a stand-in.
+" Filesystem-specific groups (directory, symlink, device, ...) are not
+" covered by the guide and follow common Catppuccin terminal conventions.
+"
+" 24-bit (gui*) colours with nearest xterm-256 (cterm*) fallbacks.
+"
+" Frappe palette reference:
+"  rosewater #f2d5cf (224)  flamingo #eebebe (217)  pink #f4b8e4 (218)
+"  mauve #ca9ee6 (182)  red #e78284 (174)  maroon #ea999c (175)
+"  peach #ef9f76 (216)  yellow #e5c890 (186)  green #a6d189 (150)
+"  teal #81c8be (115)  sky #99d1db (116)  sapphire #85c1dc (110)
+"  blue #8caaee (111)  lavender #babbf1 (147)  text #c6d0f5 (189)
+"  subtext1 #b5bfe2 (146)  subtext0 #a5adce (146)  overlay2 #949cbb (109)
+"  overlay1 #838ba7 (103)  overlay0 #737994 (244)  surface2 #626880 (60)
+"  surface1 #51576d (59)  surface0 #414559 (239)  base #303446 (237)
+"  mantle #292c3c (236)  crust #232634 (235)
+
+highlight clear
+
+" default content; Background Pane=Base, Body=Text
+highlight Win         cterm=none  ctermfg=189     ctermbg=237     gui=none  guifg=#c6d0f5 guibg=#303446
+" inactive pane; Secondary Pane=Mantle
+highlight OtherWin    cterm=none  ctermfg=146     ctermbg=236     gui=none  guifg=#a5adce guibg=#292c3c
+" empty area; Subtle=Overlay1
+highlight AuxWin      cterm=none  ctermfg=103     ctermbg=237     gui=none  guifg=#838ba7 guibg=#303446
+" Active Border=Lavender
+highlight Border      cterm=none  ctermfg=147     ctermbg=237     gui=none  guifg=#babbf1 guibg=#303446
+" inactive path header; Labels=Subtext1
+highlight TopLine     cterm=none  ctermfg=146     ctermbg=236     gui=none  guifg=#b5bfe2 guibg=#292c3c
+" active path header; active accent=Lavender
+highlight TopLineSel  cterm=bold  ctermfg=147     ctermbg=236     gui=bold  guifg=#babbf1 guibg=#292c3c
+" inactive tab
+highlight TabLine     cterm=none  ctermfg=146     ctermbg=236     gui=none  guifg=#a5adce guibg=#292c3c
+" active tab on Surface0
+highlight TabLineSel  cterm=bold  ctermfg=189     ctermbg=239     gui=bold  guifg=#c6d0f5 guibg=#414559
+" Cursor Line (Text@10% -> opaque Surface1)
+highlight CurrLine    cterm=bold  ctermfg=189     ctermbg=59      gui=bold  guifg=#c6d0f5 guibg=#51576d
+" inactive cursor line; dimmer Surface0
+highlight OtherLine   cterm=none  ctermfg=189     ctermbg=239     gui=none  guifg=#c6d0f5 guibg=#414559
+" Line Numbers=Overlay1
+highlight LineNr      cterm=none  ctermfg=103     ctermbg=237     gui=none  guifg=#838ba7 guibg=#303446
+" Selection (Overlay2@20-30% -> opaque Surface2)
+highlight Selected    cterm=bold  ctermfg=189     ctermbg=60      gui=bold  guifg=#c6d0f5 guibg=#626880
+" Surface element
+highlight StatusLine  cterm=none  ctermfg=189     ctermbg=239     gui=none  guifg=#c6d0f5 guibg=#414559
+" job/progress on Surface1
+highlight JobLine     cterm=bold  ctermfg=189     ctermbg=59      gui=bold  guifg=#c6d0f5 guibg=#51576d
+" command line on Base
+highlight CmdLine     cterm=none  ctermfg=189     ctermbg=237     gui=none  guifg=#c6d0f5 guibg=#303446
+" Errors=Red
+highlight ErrorMsg    cterm=bold  ctermfg=174     ctermbg=237     gui=bold  guifg=#e78284 guibg=#303446
+" completion; On Accent=Base on Lavender
+highlight WildMenu    cterm=bold  ctermfg=237     ctermbg=147     gui=bold  guifg=#303446 guibg=#babbf1
+" suggestion box; Secondary Pane=Mantle
+highlight SuggestBox  cterm=none  ctermfg=189     ctermbg=236     gui=none  guifg=#c6d0f5 guibg=#292c3c
+" directories (convention: Blue)
+highlight Directory   cterm=bold  ctermfg=111     ctermbg=default gui=bold  guifg=#8caaee guibg=default
+" symlink (convention: Teal)
+highlight Link        cterm=none  ctermfg=115     ctermbg=default gui=none  guifg=#81c8be guibg=default
+" broken symlink; Errors=Red
+highlight BrokenLink  cterm=bold  ctermfg=174     ctermbg=default gui=bold  guifg=#e78284 guibg=default
+" hard link
+highlight HardLink    cterm=none  ctermfg=189     ctermbg=default gui=none  guifg=#c6d0f5 guibg=default
+" socket (convention: Mauve)
+highlight Socket      cterm=none  ctermfg=182     ctermbg=default gui=none  guifg=#ca9ee6 guibg=default
+" device (convention: Peach)
+highlight Device      cterm=none  ctermfg=216     ctermbg=default gui=none  guifg=#ef9f76 guibg=default
+" fifo; Warnings=Yellow
+highlight Fifo        cterm=none  ctermfg=186     ctermbg=default gui=none  guifg=#e5c890 guibg=default
+" executable; Success=Green
+highlight Executable  cterm=bold  ctermfg=150     ctermbg=default gui=bold  guifg=#a6d189 guibg=default
